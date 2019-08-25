@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
-// import { NgGoogleAnalyticsTracker } from '../../ng-google-analytics/ng-google-analytics.service';
+import { NgGoogleAnalyticsTracker } from '../../ng-google-analytics/ng-google-analytics.service';
+// import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
+
 
 @Component({
   selector: 'app-implement-pkg',
@@ -9,9 +10,11 @@ import { NgGoogleAnalyticsTracker } from 'ng-google-analytics';
 })
 export class ImplementPkgComponent implements OnInit {
 
-  constructor(public ngGoogleAnalytics: NgGoogleAnalyticsTracker) { }
+  constructor() { }
 
   ngOnInit() {
+
+    
   }
 
 }

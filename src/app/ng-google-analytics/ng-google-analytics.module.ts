@@ -1,7 +1,9 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+
 //Service
+import { NgGoogleAnalyticsTracker } from './ng-google-analytics.service';
 import { AnalyticsIdConfig } from './ng-google-analytics.service';
 
 @NgModule({
@@ -9,7 +11,7 @@ import { AnalyticsIdConfig } from './ng-google-analytics.service';
 })
 
 export class NgGoogleAnalyticsModule {
-    constructor(@Optional() @SkipSelf() parentModule: NgGoogleAnalyticsModule) {
+    constructor(@Optional() @SkipSelf() parentModule: NgGoogleAnalyticsModule, public ngGoogleAnalytics: NgGoogleAnalyticsTracker) {
         if (parentModule) {
             throw new Error(
                 'NgGoogleAnalyticsModule is already loaded. Import it in the AppModule only');
