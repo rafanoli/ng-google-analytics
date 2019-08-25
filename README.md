@@ -1,27 +1,60 @@
 # NgGoogleAnalytics
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.4.
+Angular plugin for track pages and events with Google Analytics.
 
-## Development server
+## Why should I use it?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+If you want an easy implementation through Google Analytics in your application, you should consider using this plugin. 
 
-## Code scaffolding
+It supplies:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Automatic Google Analytics script loading
+* Automatic page tracking
+* Event tracker
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Requirements
 
-## Running unit tests
+Angular ^2.0.0
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Get Started
+### Installation
 
-## Running end-to-end tests
+```bash
+npm install ng-google-analytics
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+After installation complete, in **app.module.ts** import the NgGoogleAnalytics.
 
-## Further help
+If you want Google Analytics starting tracking you application, just copy and paste the Google Analytics ID provided.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+```js
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+
+
+import { NgGoogleAnalyticsModule } from 'ng-google-analytics';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    NgGoogleAnalyticsModule.forRoot({ id: 'UA-XXXXX-X' })
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+```
+
+# Issues and features requests
+
+Please drop an issue, if you find something that doesn't work, or a feature request.
+
+Follow me on twitter [@rafanoli](https://twitter.com/rafanoli)
