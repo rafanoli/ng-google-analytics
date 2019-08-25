@@ -1,18 +1,13 @@
 import { ModuleWithProviders, NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { NgGoogleAnalyticsComponent } from './ng-google-analytics.component';
-
 //Service
 import { AnalyticsIdConfig } from './ng-google-analytics.service';
 
-
-
 @NgModule({
-    declarations: [NgGoogleAnalyticsComponent],
     imports: [CommonModule],
-    exports: [NgGoogleAnalyticsComponent]
 })
+
 export class NgGoogleAnalyticsModule {
     constructor(@Optional() @SkipSelf() parentModule: NgGoogleAnalyticsModule) {
         if (parentModule) {
@@ -29,4 +24,5 @@ export class NgGoogleAnalyticsModule {
             ]
         };
     }
+
 }
