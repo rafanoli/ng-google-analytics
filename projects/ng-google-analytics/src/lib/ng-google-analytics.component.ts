@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'lib-NgGoogleAnalytics',
   template: ``,
-  styles: []
+  styles: [],
 })
 export class NgGoogleAnalyticsComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

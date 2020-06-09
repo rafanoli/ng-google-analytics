@@ -1,6 +1,6 @@
 {
   "name": "ng-google-analytics",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "Angular plugin for track pages and events with Google Analytics",
   "keywords": [
     "Google Analytics",
@@ -12,8 +12,11 @@
   "author": "Rafael Andrade <oliveira@live.in>",
   "license": "MIT",
   "peerDependencies": {
-    "@angular/common": "^8.0.3",
-    "@angular/core": "^8.0.3"
+    "@angular/common": "^9.1.9",
+    "@angular/core": "^9.1.9"
+  },
+  "dependencies": {
+    "tslib": "^1.10.0"
   },
   "repository": {
     "type": "git",
